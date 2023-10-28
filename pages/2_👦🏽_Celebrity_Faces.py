@@ -62,7 +62,6 @@ tab1.write("Which images contain people that are smiling?")
 tab1.write("Does someone have straight or wavy hair?")
 
 tab1.header(" ", divider='rainbow')
-tab1.write("Released: 17.10.2023")
 tab1.write("Created by: Igor Winek")
 
 ### Celebrity finder
@@ -169,39 +168,16 @@ options = tab2.multiselect(
     ['Attractive', 'Young'])
 
 ### Uploading appearance features data
-
-
 ### Defining the action of the search button
-
-
-
-
-
 ### Last update
 tab2.header(" ", divider='rainbow')
-tab2.write("Created by: Igor Winek")          
-
-
-                
-
-                
-
-
-
-
-
-
-
-
+tab2.write("Created by: Igor Winek")
 ### Bounding box
 tab3.title("Bounding box finder :man-pouting:")
-
 ### Face landmarks
 tab4.title("Face landmarks finder :eyes:")
-
 ### AI about yor face
 tab5.title("AI about your face :crystal_ball:")
-
 ###Face generator by GAN
 tab6.title("Face generator :alien:")
 
