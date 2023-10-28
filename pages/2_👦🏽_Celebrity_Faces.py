@@ -244,12 +244,20 @@ tab2.header(" ", divider='rainbow')
 tab2.write("Created by: Igor Winek | Last update: 28.10.2023")
 ### Bounding box
 tab3.title("Bounding box finder :man-pouting:")
+tab3.title("Work in progress :smile:")
+tab3.write("Created by: Igor Winek | Last update: 28.10.2023")
 ### Face landmarks
 tab4.title("Face landmarks finder :eyes:")
+tab4.title("Work in progress :smile:")
+tab4.write("Created by: Igor Winek | Last update: 28.10.2023")
 ### AI about yor face
 tab5.title("AI about your face :crystal_ball:")
+tab5.title("Work in progress :smile:")
+tab5.write("Created by: Igor Winek | Last update: 28.10.2023")
 ###Face generator by GAN
 tab6.title("Face generator :alien:")
+tab6.title("Work in progress :smile:")
+tab6.write("Created by: Igor Winek | Last update: 28.10.2023")
 
 
 
