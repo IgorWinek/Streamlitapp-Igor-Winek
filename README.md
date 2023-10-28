@@ -1,2 +1,2 @@
-# Streamlitapp-Igor-Winek
-Streamlit application repository as a portfolio
+# Streamlitapp
+Igor Winek Streamliapp
