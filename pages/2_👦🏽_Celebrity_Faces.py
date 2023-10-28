@@ -1,6 +1,5 @@
 ### Libraries import
 import streamlit as st
-import pandas as pd
 from PIL import Image
 import random
 st.set_page_config(page_title="👦🏽 Celebrity Faces")
@@ -169,12 +168,7 @@ options = tab2.multiselect(
     ['Attractive', 'Young'])
 
 ### Uploading appearance features data
-map = pd.read_excel("data/CelebFinderData/map.xlsx")
-df = pd.read_csv("data/CelebFinderData/list_attr_celeba.csv")
-df = df.replace(-1, 0)
-df = df.drop('5_o_Clock_Shadow', axis=1)
-for i, row in map.iterrows():
-        df.rename(columns={row['original_name']: row['gui_name']}, inplace=True)
+
 
 ### Defining the action of the search button
 
