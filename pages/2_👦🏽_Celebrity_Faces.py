@@ -1,6 +1,7 @@
 ### Libraries import
 import streamlit as st
 from PIL import Image
+import pandas as pd
 import random
 st.set_page_config(page_title="👦🏽 Celebrity Faces")
 
