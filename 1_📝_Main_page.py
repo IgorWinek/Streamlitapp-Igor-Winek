@@ -129,5 +129,4 @@ st.header(" ")
 
 ### Last update
 st.header(" ", divider='rainbow')
-st.write("""Released: 17.10.2023""")
 st.write("Created by: Igor Winek")
