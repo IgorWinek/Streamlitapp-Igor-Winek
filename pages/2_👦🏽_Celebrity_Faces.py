@@ -62,7 +62,7 @@ tab1.write("Which images contain people that are smiling?")
 tab1.write("Does someone have straight or wavy hair?")
 
 tab1.header(" ", divider='rainbow')
-tab1.write("Created by: Igor Winek")
+tab1.write("Created by: Igor Winek | Last update: 28.10.2023")
 
 ### Celebrity finder
 tab2.title("Celebrity finder :mag:")
@@ -241,7 +241,7 @@ if tab2.button('Search'):
                 tab2.subheader(("I could not find a face with such attributes. Try again"))
 ### Last update
 tab2.header(" ", divider='rainbow')
-tab2.write("Created by: Igor Winek")
+tab2.write("Created by: Igor Winek | Last update: 28.10.2023")
 ### Bounding box
 tab3.title("Bounding box finder :man-pouting:")
 ### Face landmarks
