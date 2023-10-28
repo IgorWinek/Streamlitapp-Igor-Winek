@@ -184,7 +184,6 @@ for i, row in map.iterrows():
 
 ### Last update
 tab2.header(" ", divider='rainbow')
-tab2.write("Released: 17.10.2023")
 tab2.write("Created by: Igor Winek")          
 
 

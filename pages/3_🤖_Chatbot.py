@@ -10,7 +10,7 @@ st.sidebar.write("Have fun with the computer version of me :smile:")
 ### Title
 st.title("Hi this is a virtual version of me :robot_face:")
 
-openai.api_key = st.secrets["OPENAI_API_KEY"]
+openai.api_key = st.secrets["OPENAI_KEY"]
 
 
 
