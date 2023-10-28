@@ -199,11 +199,11 @@ if tab2.button('Search'):
 
             col4,col5,col6,col7,col8 = tab2.columns(5)
 
-            col4.image(Image.open("data/CelebFinderData/img_align_celeba/img_align_celeba/"  +diss_df[0]))
-            col5.image(Image.open("data/CelebFinderData/img_align_celeba/img_align_celeba/"  +diss_df[1]))
-            col6.image(Image.open("data/CelebFinderData/img_align_celeba/img_align_celeba/"  +diss_df[2]))
-            col7.image(Image.open("data/CelebFinderData/img_align_celeba/img_align_celeba/"  +diss_df[3]))
-            col8.image(Image.open("data/CelebFinderData/img_align_celeba/img_align_celeba/"  +diss_df[4]))
+            col4.image(Image.open("data/CelebFinderData/img_align_celeba/"  +diss_df[0]))
+            col5.image(Image.open("data/CelebFinderData/img_align_celeba/"  +diss_df[1]))
+            col6.image(Image.open("data/CelebFinderData/img_align_celeba/"  +diss_df[2]))
+            col7.image(Image.open("data/CelebFinderData/img_align_celeba/"  +diss_df[3]))
+            col8.image(Image.open("data/CelebFinderData/img_align_celeba/"  +diss_df[4]))
 
         ### 4 images were retrieved
         elif val == 4:
@@ -211,30 +211,30 @@ if tab2.button('Search'):
 
             col9,col10,col11,col12 = tab2.columns(4)
 
-            col9.image(Image.open("data/CelebFinderData/img_align_celeba/img_align_celeba/"  +diss_df[0]))
-            col10.image(Image.open("data/CelebFinderData/img_align_celeba/img_align_celeba/"  +diss_df[1]))
-            col11.image(Image.open("data/CelebFinderData/img_align_celeba/img_align_celeba/"  +diss_df[2]))
-            col12.image(Image.open("data/CelebFinderData/img_align_celeba/img_align_celeba/"  +diss_df[3]))
+            col9.image(Image.open("data/CelebFinderData/img_align_celeba/"  +diss_df[0]))
+            col10.image(Image.open("data/CelebFinderData/img_align_celeba/"  +diss_df[1]))
+            col11.image(Image.open("data/CelebFinderData/img_align_celeba/"  +diss_df[2]))
+            col12.image(Image.open("data/CelebFinderData/img_align_celeba/"  +diss_df[3]))
         
         ### 3 images were retrieved
         elif val == 3:
             tab2.subheader("There are 3 face with your atributes!")
             col13,col14,col15 = tab2.columns(3)
-            col13.image(Image.open("data/CelebFinderData/img_align_celeba/img_align_celeba/"  +diss_df[0]))
-            col14.image(Image.open("data/CelebFinderData/img_align_celeba/img_align_celeba/"  +diss_df[1]))
-            col15.image(Image.open("data/CelebFinderData/img_align_celeba/img_align_celeba/"  +diss_df[2]))
+            col13.image(Image.open("data/CelebFinderData/img_align_celeba/"  +diss_df[0]))
+            col14.image(Image.open("data/CelebFinderData/img_align_celeba/"  +diss_df[1]))
+            col15.image(Image.open("data/CelebFinderData/img_align_celeba/"  +diss_df[2]))
 
         ### 2 images were retrieved
         elif val == 2:
             tab2.subheader("There are 2 face with your atributes!")
             col16,col17 = tab2.columns(2)
-            col16.image(Image.open("data/CelebFinderData/img_align_celeba/img_align_celeba/"  +diss_df[0]))
-            col17.image(Image.open("data/CelebFinderData/img_align_celeba/img_align_celeba/"  +diss_df[1]))
+            col16.image(Image.open("data/CelebFinderData/img_align_celeba/"  +diss_df[0]))
+            col17.image(Image.open("data/CelebFinderData/img_align_celeba/"  +diss_df[1]))
 
         ### 1 image was retrieved
         elif val == 1:
             tab2.subheader("There is 1 face with your atributes!")
-            tab2.image(Image.open("data/CelebFinderData/img_align_celeba/img_align_celeba/"  +diss_df[0]))
+            tab2.image(Image.open("data/CelebFinderData/img_align_celeba/"  +diss_df[0]))
         
         ### no image found
         elif val == 0:
