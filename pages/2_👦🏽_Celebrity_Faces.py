@@ -168,6 +168,7 @@ options = tab2.multiselect(
     ['Attractive', 'Young'])
 
 ### Uploading appearance features data
+map = pd.read_excel("data/CelebFinderData/map.xlsx")
 ### Defining the action of the search button
 ### Last update
 tab2.header(" ", divider='rainbow')
