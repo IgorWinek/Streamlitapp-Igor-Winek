@@ -169,6 +169,9 @@ options = tab2.multiselect(
 
 ### Uploading appearance features data
 map = pd.read_excel("data/CelebFinderData/map.xlsx")
+df = pd.read_csv("data/CelebFinderData/list_attr_celeba.csv")
+df = df.replace(-1, 0)
+df = df.drop('5_o_Clock_Shadow', axis=1)
 ### Defining the action of the search button
 ### Last update
 tab2.header(" ", divider='rainbow')
