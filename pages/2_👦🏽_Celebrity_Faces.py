@@ -175,6 +175,70 @@ df = df.drop('5_o_Clock_Shadow', axis=1)
 for i, row in map.iterrows():
         df.rename(columns={row['original_name']: row['gui_name']}, inplace=True)
 ### Defining the action of the search button
+if tab2.button('Search'):
+        
+        if "image_id" in options:
+            pass
+        else:
+            options.append("image_id")
+
+        ### Data filtering
+        diss_df = df[options]
+        diss_df = diss_df[(diss_df.iloc[:, :-1] != 0).any(axis=1)]
+        diss_df = diss_df[(diss_df   != 0).all(axis=1)]
+        diss_df.reset_index(drop=True, inplace=True)
+        diss_df = diss_df.iloc[:, -1:]
+        diss_df = diss_df['image_id'].to_list()
+        val = len(diss_df)
+        
+        ### More than 5 images were retrieved
+        if val > 5:
+            diss_df = random.sample(diss_df, 5)
+            tab2.subheader("There are " +str(val)+ " faces with your atributes!")
+            tab2.subheader("Here are 5 examples")
+
+            col4,col5,col6,col7,col8 = tab2.columns(5)
+
+            col4.image(Image.open("data/CelebFinderData/img_align_celeba/img_align_celeba/"  +diss_df[0]))
+            col5.image(Image.open("data/CelebFinderData/img_align_celeba/img_align_celeba/"  +diss_df[1]))
+            col6.image(Image.open("data/CelebFinderData/img_align_celeba/img_align_celeba/"  +diss_df[2]))
+            col7.image(Image.open("data/CelebFinderData/img_align_celeba/img_align_celeba/"  +diss_df[3]))
+            col8.image(Image.open("data/CelebFinderData/img_align_celeba/img_align_celeba/"  +diss_df[4]))
+
+        ### 4 images were retrieved
+        elif val == 4:
+            tab2.subheader("There are 4 face with your atributes!")
+
+            col9,col10,col11,col12 = tab2.columns(4)
+
+            col9.image(Image.open("data/CelebFinderData/img_align_celeba/img_align_celeba/"  +diss_df[0]))
+            col10.image(Image.open("data/CelebFinderData/img_align_celeba/img_align_celeba/"  +diss_df[1]))
+            col11.image(Image.open("data/CelebFinderData/img_align_celeba/img_align_celeba/"  +diss_df[2]))
+            col12.image(Image.open("data/CelebFinderData/img_align_celeba/img_align_celeba/"  +diss_df[3]))
+        
+        ### 3 images were retrieved
+        elif val == 3:
+            tab2.subheader("There are 3 face with your atributes!")
+            col13,col14,col15 = tab2.columns(3)
+            col13.image(Image.open("data/CelebFinderData/img_align_celeba/img_align_celeba/"  +diss_df[0]))
+            col14.image(Image.open("data/CelebFinderData/img_align_celeba/img_align_celeba/"  +diss_df[1]))
+            col15.image(Image.open("data/CelebFinderData/img_align_celeba/img_align_celeba/"  +diss_df[2]))
+
+        ### 2 images were retrieved
+        elif val == 2:
+            tab2.subheader("There are 2 face with your atributes!")
+            col16,col17 = tab2.columns(2)
+            col16.image(Image.open("data/CelebFinderData/img_align_celeba/img_align_celeba/"  +diss_df[0]))
+            col17.image(Image.open("data/CelebFinderData/img_align_celeba/img_align_celeba/"  +diss_df[1]))
+
+        ### 1 image was retrieved
+        elif val == 1:
+            tab2.subheader("There is 1 face with your atributes!")
+            tab2.image(Image.open("data/CelebFinderData/img_align_celeba/img_align_celeba/"  +diss_df[0]))
+        
+        ### no image found
+        elif val == 0:
+                tab2.subheader(("I could not find a face with such attributes. Try again"))
 ### Last update
 tab2.header(" ", divider='rainbow')
 tab2.write("Created by: Igor Winek")
