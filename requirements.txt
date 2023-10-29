@@ -4,4 +4,4 @@ openai
 pandas
 Pillow
 tensorflow
-cv2
+opencv-python
