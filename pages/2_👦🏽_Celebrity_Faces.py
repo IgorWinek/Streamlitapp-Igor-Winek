@@ -5,10 +5,16 @@ import pandas as pd
 import random
 st.set_page_config(page_title="👦🏽 Celebrity Faces")
 
+### Side bar
+st.sidebar.write("Welcome to my project in which I will show off my compiuter vision skills")
+st.sidebar.write("I would like to show what I can do along with image processing hence several tabs such as 'Celebrity finder', 'Bounding box', 'Face landmarks', 'AI about your face', 'Face generator'.")
+st.sidebar.write("Each one shows a different part of my skills and what the tab shows can be found inside it")
+st.sidebar.write("Have fun with my computer vision models")
+
 ### Defining tabs
 tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["Main tab 👦🏽","Celebrity finder :mag:", "Bounding box :man-pouting:", "Face landmarks :eyes:", "AI about your face :crystal_ball:", "Face generator :alien:" ])
 
-### Main tab
+##### Main tab ##########
 tab1.title("Main tab 👦🏽")
 
 tab1.write("In this sub-site I would like to present my skills which are based on computer vision. In it I would like to present:")
@@ -64,7 +70,7 @@ tab1.write("Does someone have straight or wavy hair?")
 tab1.header(" ", divider='rainbow')
 tab1.write("Created by: Igor Winek | Last update: 28.10.2023")
 
-### Celebrity finder
+##### Celebrity finder tab ##########
 tab2.title("Celebrity finder :mag:")
 
 ### Explanation of how the search engine works
@@ -242,10 +248,46 @@ if tab2.button('Search'):
 ### Last update
 tab2.header(" ", divider='rainbow')
 tab2.write("Created by: Igor Winek | Last update: 28.10.2023")
-### Bounding box
+
+########## Bounding Box Tab ##########
+
+### Content
 tab3.title("Bounding box finder :man-pouting:")
-tab3.title("Work in progress :smile:")
-tab3.write("Created by: Igor Winek | Last update: 28.10.2023")
+tab3.write("""Okay from the main tab we can already find out what a bounding box is. But what is it used for? Bounding boxes are widely used in various fields and applications, primarily in computer vision and image processing, but they also have applications in other domains. The main purpose of a bounding box is to enclose and represent the spatial extent or location of an object or region of interest in an image or a two-dimensional space. Here are some common uses of bounding boxes:""")
+tab3.write("""1. Object Detection: Bounding boxes are used to identify and locate objects within images or video frames. In object detection tasks, algorithms draw bounding boxes around objects of interest, providing information about the object's position, size, and orientation.""")
+tab3.write("""2. Object Localization: Bounding boxes are used for object localization tasks, where the goal is to determine not only the presence of an object but also its precise location within the image. This is commonly used in applications like self-driving cars and robotics.""")
+tab3.write("""3. Image Annotation: Bounding boxes are often used for annotating images, making it easier for machine learning models to recognize and classify objects within the images. These annotations can be used for training data for object detection or segmentation tasks.""")
+tab3.write("""4. Object Tracking: In computer vision and video analysis, bounding boxes can be used to track the movement of objects across frames in a video sequence. Object tracking algorithms use bounding boxes to keep tabs on the objects of interest.""")
+tab3.write("""5. Region of Interest (ROI) Selection: Bounding boxes are used to define regions of interest in an image. For example, in medical imaging, a bounding box can be drawn around a specific area of interest, such as a tumor, to focus on further analysis.""")
+
+tab3.write("""I don't want to bore you with what bounding boxes are used for, just to show how I used them in this model. Let me just say that I used them for the first application mentioned above, which is 'Object Detection'.""")
+tab3.subheader("About this model")
+tab3.write("""My model uses CNN's popular VGG16 network to detect the position of a face in an image. In short, after the image is processed through the prepared model, a bounding box appears that indicates the most popular place where the face is located. Note the model does not take into account for these moments the situation in which the face is not in the image. With more time I will be able to solve this problem, and what is more, the model will not only search for faces in the images, but will also look for them while the user's camera is turned on.""")
+tab3.write("""If you would like to see how I prepared the model you can access it using the button below.""")
+tab3.link_button("Go to the model repository", "https://github.com/IgorWinek/Model_BBox_CelebA")
+
+### Model using
+tab3.subheader("Using the model")
+tab3.write("""In the container below, you can upload a photo with your face on it""")
+uploaded_files = tab3.file_uploader("Choose a IMG file", accept_multiple_files=False)
+
+col18,col19 = tab3.columns(2)
+col20,col21,col23= tab3.columns(3)
+
+col21.link_button("Generate bounding box", "https://github.com/IgorWinek/Model_BBox_CelebA")
+
+if uploaded_files is not None:
+    image = Image.open(uploaded_files)
+    col18.image(image, caption='Your image')
+
+if uploaded_files is not None:
+    image = Image.open(uploaded_files)
+    col19.image(image, caption='Your image')
+
+
+
+tab3.header(" ", divider='rainbow')
+tab3.write("Created by: Igor Winek | Last update: 29.10.2023")
 ### Face landmarks
 tab4.title("Face landmarks finder :eyes:")
 tab4.title("Work in progress :smile:")
